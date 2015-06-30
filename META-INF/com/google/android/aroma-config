@@ -1,0 +1,73 @@
+### LICENSE:
+#
+# Copyright (C) 2011 Ahmad Amarullah ( http://amarullz.com/ )
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+##
+#
+##
+#
+# 				  AROMA Installer
+# 		Written by Kryten2k35 Using AROMA Installer
+#
+# Initializing Rom Information & Variables
+#
+ ini_set("force_colorspace","rgba");
+ #ini_set("dp","5");
+ ini_set("transition","stack");
+
+ini_set("rom_name",             "UltimaROM-Shamu");
+ini_set("rom_version",          "");
+ini_set("rom_author",           "");
+ini_set("rom_device",           "");
+ini_set("rom_date",             "");
+
+##
+# Splash Screen
+#
+splash(
+  #-- Duration 2000ms / 2 seconds
+    3000,
+  
+  #-- <AROMA Resource Dir>/JFLTE-GPE.png
+    "JFLTE-GPE"
+);
+##
+# Load Language, Fonts and Theme
+#
+  loadlang("langs/en.lang");
+  
+fontresload( "0", "ttf/Roboto-Regular.ttf", "12" );
+fontresload( "1", "ttf/Roboto-Regular.ttf", "16" ); 
+theme("material");
+
+
+ini_set("text_next", "Done");
+
+
+###################################################################################################################
+#                                                                                                                 #
+#                                       INSTALLATION  PROCESS                                                     #
+#                                                                                                                 #
+###################################################################################################################
+
+install(
+		"Installing ROM",
+		"Installation of <b>"+ini_get("rom_name")+"</b>",
+		"@install",
+		"Installation of <b>"+ini_get("rom_name")+"</b> completed."
+	);
+
+#---- FINISH
+
